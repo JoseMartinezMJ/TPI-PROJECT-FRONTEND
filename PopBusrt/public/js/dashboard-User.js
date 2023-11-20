@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Encuentra el elemento con la clase "mode-text" dentro del cuerpo
     modeText = body.querySelector(".mode-text");
 
-    // Añade un event listener al elemento con la clase "toggle" (probablemente un botón de menú)
+    // Añade un event listener al elemento con la clase "toggle" (botón de menú)
     toggle.addEventListener("click", () => {
         // Alterna la clase "close" en el elemento con la clase "sidebar"
         sidebar.classList.toggle("close");
