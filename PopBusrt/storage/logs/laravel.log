@@ -1,0 +1,23 @@
+[2023-11-20 04:41:14] production.ERROR: file_get_contents(/home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(/home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/.env): Failed to open stream: No such file or directory at /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:111)
+[stacktrace]
+#0 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}()
+#2 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(111): file_get_contents()
+#3 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(93): Illuminate\\Foundation\\Console\\KeyGenerateCommand->writeNewEnvironmentFileWith()
+#4 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(58): Illuminate\\Foundation\\Console\\KeyGenerateCommand->setKeyInEnvironmentFile()
+#5 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\KeyGenerateCommand->handle()
+#6 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#8 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#9 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call()
+#10 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call()
+#11 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute()
+#12 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run()
+#13 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/symfony/console/Application.php(1063): Illuminate\\Console\\Command->run()
+#14 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand()
+#15 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun()
+#16 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#17 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run()
+#18 /home/edrasl/TPI/TPI-PROJECT-FRONTEND/PopBusrt/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#19 {main}
+"} 
