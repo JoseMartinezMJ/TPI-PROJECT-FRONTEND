@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImagenController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\LoginController; // Asegúrate de importar el controlador de inicio de sesión
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +18,13 @@ use Illuminate\Http\Request;
 Route::get('/welcome', function () {
     return view('welcome');
 });
-// Establece una ruta GET para la URL '/PopBurst', que retorna la vista 'PopBurst.blade.php'
+
 Route::get('/PopBurst', function () {
     return view('PopBurst');
 });
-// Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
+
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
+
+// Rutas para el controlador de inicio de sesión
+Route::get('/Login', [LoginController::class, 'showLoginForm'])->name('Login.show'); // Vista del formulario de inicio de sesión
+Route::post('/Login', [LoginController::class, 'Login'])->name('Login.login'); // Procesar el formulario de inicio de sesión
