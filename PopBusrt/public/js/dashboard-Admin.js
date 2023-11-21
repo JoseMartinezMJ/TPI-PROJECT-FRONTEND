@@ -1,4 +1,4 @@
-//Logica para agregar dinanismo a la vista User.blade.php
+//Logica para agregar dinanismo a la vista Admin.blade.php
 document.addEventListener("DOMContentLoaded", function() {
     // Selecciona el cuerpo del documento
     const body = document.querySelector("body");
