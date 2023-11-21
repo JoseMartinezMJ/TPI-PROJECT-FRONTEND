@@ -35,8 +35,8 @@
             <ul class="menu-links">
                 <li class="nav-link">
                     <a href="#">
-                        <i class='bx bx-user-circle icon'></i>
-                        <span class="text nav-text">Profile</span>
+                        <i class='bx bxs-user-account icon'></i>
+                        <span class="text nav-text">Users</span>
                     </a>
                 </li>
                 <li class="nav-link">
@@ -47,20 +47,8 @@
                 </li>
                 <li class="nav-link">
                     <a href="#">
-                        <i class='bx bx-history icon'></i>
-                        <span class="text nav-text">Shopping History</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
                         <i class='bx bxs-coupon icon' ></i>
                         <span class="text nav-text">Coupons</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-list-plus icon' ></i>
-                        <span class="text nav-text">Wish List</span>
                     </a>
                 </li>
                 <li class="nav-link">
@@ -92,11 +80,11 @@
         </div>
     </nav>
     <!-- Inicio de estructura SideBar Menu -->
-    <!-- Inicio de estructura para la seccion o el contenido de User.blade.php -->
+    <!-- Inicio de estructura para la seccion o el contenido de Admin.blade.php -->
     <section class="home">
         <div class="text">Dashboard</div>
     </section>
-    <!-- Fin de estructura para la seccion o el contenido de User.blade.php -->
-    <script src="{{ asset('js/dashboard-User.js') }}"></script>
+    <!-- Fin de estructura para la seccion o el contenido de Admin.blade.php-->
+    <script src="{{ asset('js/dashboard-Admin.js') }}"></script>
 </body>
 </html>

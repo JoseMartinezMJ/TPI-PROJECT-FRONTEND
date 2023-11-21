@@ -26,5 +26,9 @@ Route::get('/PopBurst', function () {
 Route::get('/User', function () {
     return view('User');
 });
+// Establece una ruta GET para la URL '/Admin', que retorna la vista 'Admin.blade.php'
+Route::get('/Admin', function () {
+    return view('Admin');
+});
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
