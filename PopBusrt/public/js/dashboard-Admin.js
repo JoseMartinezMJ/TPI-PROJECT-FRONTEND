@@ -1,41 +1,59 @@
 //Logica para agregar dinanismo a la vista Admin.blade.php
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona el cuerpo del documento
-    const body = document.querySelector("body");
-    
-    // Encuentra el elemento con la clase "sidebar" dentro del cuerpo
-    sidebar = body.querySelector(".sidebar");
+// Seleccion de los elementos con las clases "btn-menu" y "sidebar" y los almacena en variables.
+const btn_menu = document.querySelector(".btn-menu");
+const side_bar = document.querySelector(".sidebar");
 
-    // Encuentra el elemento con la clase "toggle" dentro del cuerpo
-    toggle = body.querySelector(".toggle");
+// Eventos de clic al elemento "btn_menu".
+btn_menu.addEventListener("click", function () {
+  // Alterna la clase "expand" en el elemento "side_bar".
+  side_bar.classList.toggle("expand");
+  // Llama a la función "changebtn".
+  changebtn();
+});
 
-    // Encuentra el elemento con la clase "search-box" dentro del cuerpo
-    searchBtn = body.querySelector(".search-box");
+// Función "changebtn".
+function changebtn() {
+  // Verifica si la clase "expand" está presente en el elemento "side_bar".
+  if (side_bar.classList.contains("expand")) {
+    // Reemplaza la clase "bx-menu" con "bx-menu-alt-right" en el elemento "btn_menu".
+    btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+  } else {
+    // Reemplaza la clase "bx-menu-alt-right" con "bx-menu" en el elemento "btn_menu".
+    btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+  }
+}
 
-    // Encuentra el elemento con la clase "toggle-switch" dentro del cuerpo
-    modeSwitch = body.querySelector(".toggle-switch");
+// Selecciona los elementos con las clases "theme-btn" y "theme-ball" y los almacena en variables.
+const btn_theme = document.querySelector(".theme-btn");
+const theme_ball = document.querySelector(".theme-ball");
 
-    // Encuentra el elemento con la clase "mode-text" dentro del cuerpo
-    modeText = body.querySelector(".mode-text");
+// Obtiene el tema almacenado en el almacenamiento local.
+const localData = localStorage.getItem("theme");
 
-    // Añade un event listener al elemento con la clase "toggle" (botón de menú)
-    toggle.addEventListener("click", () => {
-        // Alterna la clase "close" en el elemento con la clase "sidebar"
-        sidebar.classList.toggle("close");
-    });
+// Establece el tema predeterminado en "light" si no hay ningún tema almacenado en el almacenamiento local.
+if (localData == null) {
+  localStorage.setItem("theme", "light");
+}
 
-    // Añade un event listener al elemento con la clase "toggle-switch" (interruptor de modo oscuro)
-    modeSwitch.addEventListener("click", () => {
-        // Alterna la clase "dark" en el elemento con la etiqueta "body"
-        body.classList.toggle("dark");
+// Verifica el tema almacenado y aplica las clases correspondientes al cuerpo y a los elementos "theme-ball".
+if (localData == "dark") {
+  document.body.classList.add("dark-mode");
+  theme_ball.classList.add("dark");
+} else if (localData == "light") {
+  document.body.classList.remove("dark-mode");
+  theme_ball.classList.remove("dark");
+}
 
-        // Comprueba si la clase "dark" está presente en el cuerpo
-        if(body.classList.contains("dark")){
-            // Si está presente, actualiza el texto del elemento con la clase "mode-text" a "Light Mode"
-            modeText.innerText = "Light"
-        } else {
-            // Si no está presente, actualiza el texto del elemento con la clase "mode-text" a "Dark Mode"
-            modeText.innerText = "Dark"
-        }
-    });
+// Eventos de click al elemento "btn_theme".
+btn_theme.addEventListener("click", function () {
+  // Alterna la clase "dark-mode" en el cuerpo y la clase "dark" en el elemento "theme-ball".
+  document.body.classList.toggle("dark-mode");
+  theme_ball.classList.toggle("dark");
+
+  // Actualiza el tema en el almacenamiento local según el estado actual.
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
