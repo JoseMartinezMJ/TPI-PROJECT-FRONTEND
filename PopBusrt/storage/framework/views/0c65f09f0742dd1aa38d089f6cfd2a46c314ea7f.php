@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="stylesheet" href="index.css">
-    <!-----===== css =====----->
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/styles.css')); ?>">
     <!-----===== Boxicons CSS =====----->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,13 +26,11 @@
                 <h2>Welcome! <br><span>
                     Merch Online
                 </span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus?</p>
+                <p>Lorem ipsum dolor sit amet </p>
                 <div class="social-icon">
                     <a  href="#"><i class='bx bxl-facebook'></i></a>
-                    <a  href="#"><i class='bx bxl-twitter'></i></a>
+                    <a  href="https://github.com/JoseMartinezMJ/TPI-PROJECT-FRONTEND/tree/Jose-Martinez"><i class='bx bxl-github'></i></a>
                     <a  href="#"><i class='bx bxl-youtube'></i></a>
-                    <a  href="#"><i class='bx bxl-instagram'></i></a>
-                    <a  href="#"><i class='bx bxl-linkedin'></i></a>
                 </div>
             </div>
         </div>
@@ -56,12 +51,12 @@
                     </div>
                     <div class="remember-password">
                         <label for=""><input type="checkbox">Remember Me</label>
-                        <a style="color: black;" href="#">Forget Password</a>
+                        <a style="color: white;" href="#">Forget Password</a>
                     </div>
                     <button class="btn">Login In</button>
-                    <a style="color: black;" href="#" class="guest-login">Login as Guest</a>
+                    <a style="color: white;" href="#" class="guest-login">Login as Guest</a>
                     <div class="create-account">
-                        <p>Create A New Account? <a style="color: black;" href="#" class="register-link">Sign Up</a></p>
+                        <p>Create A New Account? <a style="color: white;" href="#" class="register-link">Sign Up</a></p>
                     </div>
                 </form>
             </div>

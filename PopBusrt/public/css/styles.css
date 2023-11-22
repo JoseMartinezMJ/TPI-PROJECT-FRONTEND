@@ -208,12 +208,12 @@ body {
     background-attachment: fixed; /* Fija la imagen de fondo */
 }
 .background{
-    background: url(../img/fondoo.jpg) no-repeat;
+    background: rgb(235, 235, 219);
     background-position: center;
     background-size:cover ;
     height: 100vh;
     width: 100%;
-    filter: blur(10px);
+    filter: blur(0px);
 }
 
 /* Cambio de color de los iconos de redes sociales a negro */
@@ -245,7 +245,7 @@ body {
 
 }
 .form-box {
-    color: #000; /* Cambia el color del texto a negro */
+    color: #fffbfb; /* Cambia el color del texto a negro */
 }
 .navbar a {
     position: relative;
@@ -279,39 +279,7 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
-.search-bar{
-    width: 250px;
-    height: 45px;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-}
-.search-bar input{
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 16px;
-    padding-left: 10px;
-}
-.search-bar button{
-    width: 40px;
-    height: 100%;
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-.search-bar input::placeholder{
-    color: #fff;
-}
-.search-bar button i{
-    font-size: 22px;
-}
+
 .container {
     position: absolute;
     left: 50%;
@@ -320,12 +288,12 @@ body {
     width: 75%;
     height: 550px;
     margin-top: 20px;
-    background: url(../img/fondoo.jpg) no-repeat;
+    background: url(../img/fondo1.jpeg) no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #ce3636; /* Cambia el color de fondo según tu preferencia */
+    background-color: #700f0f; /* Cambia el color de fondo según tu preferencia */
 }
 .item{
     position: absolute;
@@ -333,7 +301,7 @@ body {
     left: 0;
     width: 58%;
     height: 100%;
-    color: #000000;
+    color: #ffffff;
     background: transparent;
     padding: 80px;
     display: flex;
@@ -367,7 +335,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 58%);
+    width: calc(100% - 45%);
     height: 100%;
     color: #fff;
     backdrop-filter: blur(10px);
@@ -412,7 +380,7 @@ body {
 .form-box .input-box{
     width: 340px;
     height: 50px;
-    border-bottom: 2px solid#fff;
+    border-bottom: 2px solid#f5f3f3;
     margin: 30px 0;
     position: relative;
 }
@@ -475,10 +443,10 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background: #e74c3c; /* Cambia el color del botón según tu preferencia */
+    background: #1f1d1d; /* Cambia el color del botón según tu preferencia */
     font-size: 16px;
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(41, 40, 40, 0.4);
 }
 
 .create-account{
@@ -506,3 +474,4 @@ body {
     float: left;
     margin-left: 0%;
 }
+

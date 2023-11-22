@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImagenController;
-use App\Http\Controllers\LoginController; // Asegúrate de importar el controlador de inicio de sesión
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +27,10 @@ Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
 
 // Rutas para el controlador de inicio de sesión
 Route::get('/Login', [LoginController::class, 'showLoginForm'])->name('Login.show'); // Vista del formulario de inicio de sesión
-Route::post('/Login', [LoginController::class, 'Login'])->name('Login.login'); // Procesar el formulario de inicio de sesión
+Route::post('/Login', [LoginController::class, 'login'])->name('Login.login'); // Procesar el formulario de inicio de sesión
+
+// Rutas para el registro
+Route::get('/registro', function () {
+    return view('Register'); // Modifica aquí el nombre de la vista
+})->name('registro.show'); // Vista del formulario de registro
+Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
