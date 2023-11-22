@@ -1,4 +1,4 @@
-//Logica para agregar dinanismo a la vista User.blade.php
+//Logica para agregar dinanismo a la vista Admin.blade.php
 // Seleccion de los elementos con las clases "btn-menu" y "sidebar" y los almacena en variables.
 const btn_menu = document.querySelector(".btn-menu");
 const side_bar = document.querySelector(".sidebar");

@@ -22,17 +22,11 @@ Route::get('/welcome', function () {
 Route::get('/PopBurst', function () {
     return view('PopBurst');
 });
-Route::get('/PopBurstInicio', function () {
-    return view('PopBurstInicio');
-});
-Route::get('/Navbar', function () {
-    return view('Navbar');
-});
-Route::get('/Footer', function () {
-    return view('Footer');
-});
-Route::get('/Historial', function () {
-    return view('Historial');
+
+
+
+
+
 });
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
