@@ -31,5 +31,8 @@ Route::get('/Navbar', function () {
 Route::get('/Footer', function () {
     return view('Footer');
 });
+Route::get('/Historial', function () {
+    return view('Historial');
+});
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
