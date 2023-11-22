@@ -23,8 +23,25 @@ Route::get('/PopBurst', function () {
     return view('PopBurst');
 });
 
-
-
+Route::get('/PopBurstInicio', function () {
+    return view('PopBurstInicio');
+});
+Route::get('/Navbar', function () {
+    return view('Navbar');
+});
+Route::get('/Footer', function () {
+    return view('Footer');
+});
+Route::get('/Historial', function () {
+    return view('Historial');
+});
+// Establece una ruta GET para la URL '/User', que retorna la vista 'User.blade.php'
+Route::get('/User', function () {
+    return view('User');
+});
+// Establece una ruta GET para la URL '/Admin', que retorna la vista 'Admin.blade.php'
+Route::get('/Admin', function () {
+    return view('Admin');
 
 
 });
