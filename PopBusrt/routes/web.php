@@ -22,6 +22,18 @@ Route::get('/welcome', function () {
 Route::get('/PopBurst', function () {
     return view('PopBurst');
 });
+// Establece una ruta GET para la URL '/Navbar', que retorna la vista 'Navbar.blade.php'
+Route::get('/Navbar', function () {
+    return view('Navbar');
+});
+// Establece una ruta GET para la URL '/Front-page', que retorna la vista 'Front-page.blade.php'
+Route::get('/Front-page', function () {
+    return view('Front-page');
+});
+// Establece una ruta GET para la URL '/Footer', que retorna la vista 'Footer.blade.php'
+Route::get('/Footer', function () {
+    return view('Footer');
+});
 // Establece una ruta GET para la URL '/User', que retorna la vista 'User.blade.php'
 Route::get('/User', function () {
     return view('User');
