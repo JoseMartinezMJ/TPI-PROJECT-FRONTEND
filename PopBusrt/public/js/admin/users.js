@@ -1,4 +1,4 @@
-import { getUsers } from "./fetchUsers.js";
+import { getUsers } from "./fetch.js";
 import { drawUsers } from "./codeHTML.js";
 
 const showUsers = async() => {

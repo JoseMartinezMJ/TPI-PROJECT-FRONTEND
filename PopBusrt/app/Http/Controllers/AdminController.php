@@ -10,4 +10,9 @@ class AdminController extends Controller
     {
         return view('Admin_Users');
     }
+
+    public function getProducts()
+    {
+        return view('Admin_Products');
+    }
 }

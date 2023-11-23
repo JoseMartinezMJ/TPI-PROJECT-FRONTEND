@@ -49,6 +49,7 @@ Route::get('/Admin', function () {
 
 //Muestra todos los usuarios en una tabla
 Route::get('/Admin/Users', [AdminController::class, 'getUsers'])->name('admin.users');
+Route::get('/Admin/Products', [AdminController::class, 'getProducts'])->name('admin.product');
 
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
