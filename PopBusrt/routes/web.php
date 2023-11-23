@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 
 /*
@@ -44,9 +45,11 @@ Route::get('/User', function () {
 // Establece una ruta GET para la URL '/Admin', que retorna la vista 'Admin.blade.php'
 Route::get('/Admin', function () {
     return view('Admin');
-
-
 });
+
+//Muestra todos los usuarios en una tabla
+Route::get('/Admin/Users', [AdminController::class, 'getUsers'])->name('admin.users');
+
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
 

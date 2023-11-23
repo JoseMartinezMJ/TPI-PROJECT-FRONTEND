@@ -27,7 +27,7 @@
         <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="{{route('admin.users')}}">
+        <a href="#">
           <i class="bx bxs-user-account -alt-2"></i>
           <span class="title">Users</span>
         </a>
@@ -71,21 +71,47 @@
     </div>
   </section>
   <section class="home">
-    <p>Admin Dashboard</p>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-    <button type="button" class="btn btn-link">Link</button>
+    <p>Admin Dashboard - Usuarios</p>
+    
+    <section class="container">
+        <button type="submit" class="btn btn-outline-info">Crear usuario</button>
+
+        <div class="table-responsive mt-4">
+            <table class="table table-striped
+            table-hover	
+            table-borderless
+            table-primary
+            align-middle">
+                <thead class="table-light">
+                    <caption>USUARIOS</caption>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Correo</th>
+                        <th>Edad</th>
+                        <th>Genero</th>
+                        <th>Pais</th>
+                        <th>Dirección Principal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                    <tbody class="table-group-divider" data-users>
+                        
+                    </tbody>
+                    <tfoot>
+                        
+                    </tfoot>
+            </table>
+        </div>
+    </section>
+
   </section>
   <!-- Fin de estructura SideBar Menu -->
   <!-- Inicio de estructura para la seccion o el contenido de User.blade.php -->
 
   <!-- Fin de estructura para la seccion o el contenido de User.blade.php -->
+  <script src="{{ asset('js/Users.js') }}" type="module"></script>
   <script src="{{ asset('js/dashboard-Admin.js') }}"></script>
   <!-----===== Bootstrap JS y Popper.js =====----->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
