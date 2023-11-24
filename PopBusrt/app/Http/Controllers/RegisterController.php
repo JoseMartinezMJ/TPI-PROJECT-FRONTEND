@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use GuzzleHttp\Client;
 
 class RegistroController extends Controller
 {
@@ -33,7 +34,5 @@ class RegistroController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-    // Después de registrar al usuario, redirige a la página del formulario con un mensaje de éxito
-    return redirect('/')->with('success', '¡Registro exitoso!')->withInput();
-}
+    }
 }
