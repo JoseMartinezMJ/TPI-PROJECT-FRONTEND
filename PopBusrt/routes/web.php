@@ -16,7 +16,13 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// historial de compras
+Route::get('/historialCompras', function () {
+    return view('historialCompras');
+});
+Route::get('/listaDeseo', function () {
+    return view('listaDeseo');
+});
 Route::get('/welcome', function () {
     return view('welcome');
 });
