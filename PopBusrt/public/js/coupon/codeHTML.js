@@ -1,8 +1,8 @@
 import { discount_coupon } from "./CouponClass.js";
 
-export const drawCoupon = (users) => {
-    const Tbody = document.querySelector('[data-users]');
-    users.forEach(user => {
+export const drawCoupon = (coupons) => {
+    const Tbody = document.querySelector('[data-coupons]');
+    coupons.forEach(coupon => {
         const tr = document.createElement('tr');
         tr.classList.add('table-primary');
 
@@ -13,10 +13,9 @@ export const drawCoupon = (users) => {
             <td>${coupon.available_coupon}</td>
             <td>${coupon.created_at}</td>
             <td>${coupon.updated_at}</td>
-    
             <td>
                 <a href="#" class="btn btn-outline-success m-1">Editar</a>
-                <button type="submit" class="btn btn-outline-danger" onclick="destroyUser(${user.id})">Eliminar</button>
+                <button type="submit" class="btn btn-outline-danger" onclick="destroyUser(${coupon.id})">Eliminar</button>
             </td>
         `;
 

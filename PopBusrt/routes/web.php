@@ -59,4 +59,4 @@ Route::get('/Register', function () {
 })->name('registro.show'); // Vista del formulario de registro
 Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
 
-Route::get('/Coupon/Users', [CouponController::class, 'getCoupon'])->name('coupon');
+Route::get('/Discount', [CouponController::class, 'getCoupon'])->name('coupon');

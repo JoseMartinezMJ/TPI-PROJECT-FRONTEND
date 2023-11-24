@@ -84,7 +84,6 @@
 
     <section class="container-data">
     <div class="container" data-alert>
-			
             </div>
             <button type="submit" class="btn btn-outline-info">Crear usuario</button>
             
@@ -95,20 +94,16 @@
                 table-primary
                 align-middle">
                     <thead class="table-light">
-                        <caption>PRODUCTOS REGISTRADOS</caption>
+                        <caption>CUPONES REGISTRADOS</caption>
                         <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Usuario</th>
-                            <th>Correo</th>
-                            <th>Edad</th>
-                            <th>Genero</th>
-                            <th>Pais</th>
-                            <th>Dirección Principal</th>
+                            <th>Primer descuento</th>
+                            <th>Cupones disponibles</th>
+                            <th>Creado</th>
+                            <th>Actualizado</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                        <tbody class="table-group-divider" data-users>
+                        <tbody class="table-group-divider" data-coupons>
                             
                         </tbody>
                         <tfoot>
@@ -117,7 +112,6 @@
                 </table>
             </div>
             <script src="{{ asset('js/coupon/coupon.js') }}" type="module"></script>
-            <script src="{{ asset('js/coupon/helpers.js') }}"></script>
     </section>
   </section>
   <!-- Fin de estructura SideBar Menu -->
