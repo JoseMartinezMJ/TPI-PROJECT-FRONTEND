@@ -1,5 +1,9 @@
 @extends('Admin')
 
+@section('title')
+Productos
+@endsection
+
 @section('content')
 <div class="container" data-alert>
 			

@@ -11,8 +11,15 @@ class AdminController extends Controller
         return view('Admin_Users');
     }
 
+    public function createUser()
+    {
+        return view('Admin_New_User');
+    }
+
     public function getProducts()
     {
         return view('Admin_Products');
     }
+
+    
 }

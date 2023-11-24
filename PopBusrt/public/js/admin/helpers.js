@@ -7,7 +7,10 @@ function destroyUser (userId) {
 
         if (response.ok) {
             let message = "El usuario fue eliminado exitosamente :D";
-            location.reload();
+
+            setTimeout(() => {
+                location.reload();
+            }, 4000);
 
             const containerAlert = document.querySelector('[data-alert]');
             let alertContent = '';
@@ -20,7 +23,9 @@ function destroyUser (userId) {
 
         } else {
             let message = "Parece que tuvimos un problema al intentar eliminar el usuario, por favor intentalo más tarde.";
-            location.reload();
+            setTimeout(() => {
+                location.reload();
+            }, 4000);
 
             const containerAlert = document.querySelector('[data-alert]');
             let alertContent = '';
@@ -46,7 +51,9 @@ function destroyProduct(productId) {
 
         if (response.ok) {
             let message = "El producto fue eliminado exitosamente :D";
-            //location.reload();
+            setTimeout(() => {
+                location.reload();
+            }, 4000);
 
             const containerAlert = document.querySelector('[data-alert]');
             let alertContent = '';
@@ -59,7 +66,9 @@ function destroyProduct(productId) {
 
         } else {
             let message = "Parece que tuvimos un problema al intentar eliminar el producto, por favor intentalo más tarde.";
-            //location.reload();
+            setTimeout(() => {
+                location.reload();
+            }, 4000);
 
             const containerAlert = document.querySelector('[data-alert]');
             let alertContent = '';

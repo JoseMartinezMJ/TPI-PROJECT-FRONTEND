@@ -1,10 +1,14 @@
 @extends('Admin')
 
+@section('title')
+Usuarios
+@endsection
+
 @section('content')
 <div class="container" data-alert>
 			
 </div>
-<button type="submit" class="btn btn-outline-info">Crear usuario</button>
+<a href="{{route('admin.user.create')}}" type="submit" class="btn btn-outline-info">Crear usuario</a>
 
 <div class="table-responsive mt-4">
 	<table class="table table-striped
@@ -13,7 +17,7 @@
 	table-primary
 	align-middle">
 		<thead class="table-light">
-			<caption>PRODUCTOS REGISTRADOS</caption>
+			<caption>USUARIOS REGISTRADOS</caption>
 			<tr>
 				<th>Id</th>
 				<th>Nombre</th>
@@ -23,6 +27,7 @@
 				<th>Genero</th>
 				<th>Pais</th>
 				<th>Dirección Principal</th>
+				<th>Rol de usuario</th>
 				<th>Acciones</th>
 			</tr>
 		</thead>

@@ -10,6 +10,8 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!-----===== Bootstrap CSS =====----->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  @yield('styles')
+
   <title>PopBurst</title>
 </head>
 
@@ -71,7 +73,7 @@
     </div>
   </section>
   <section class="home">
-    <p>Admin Dashboard</p>
+    <p>Admin Dashboard - @yield('title')</p>
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>

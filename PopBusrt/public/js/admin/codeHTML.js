@@ -5,6 +5,11 @@ export const drawUsers = (users) => {
     users.forEach(user => {
         const tr = document.createElement('tr');
         tr.classList.add('table-primary');
+        let rol = "Cliente";
+
+        if (user.rol) {
+            rol = "Administrador";
+        }
 
         let row = '';
 
@@ -17,6 +22,7 @@ export const drawUsers = (users) => {
             <td>${user.gender}</td>
             <td>${user.country}</td>
             <td>${user.main_addr}</td>
+            <td>${rol}</td>
             <td>
                 <a href="#" class="btn btn-outline-success m-1">Editar</a>
                 <button type="submit" class="btn btn-outline-danger" onclick="destroyUser(${user.id})">Eliminar</button>
@@ -64,6 +70,7 @@ export const showAlert = (type, message) => {
                     ${message}
                 </div>
             `;
+            containerAlert.innerHTML = alertContent;
             break;
     
         default:
