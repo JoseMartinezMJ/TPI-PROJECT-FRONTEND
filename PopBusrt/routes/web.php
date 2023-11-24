@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\HistorialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\CouponController;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Http;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,9 +37,7 @@ Route::get('/Navbar', function () {
 Route::get('/Footer', function () {
     return view('Footer');
 });
-Route::get('/Historial', function () {
-    return view('Historial');
-});
+
 // Establece una ruta GET para la URL '/User', que retorna la vista 'User.blade.php'
 Route::get('/User', function () {
     return view('User');
@@ -44,8 +45,6 @@ Route::get('/User', function () {
 // Establece una ruta GET para la URL '/Admin', que retorna la vista 'Admin.blade.php'
 Route::get('/Admin', function () {
     return view('Admin');
-
-
 });
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
@@ -59,3 +58,5 @@ Route::get('/Register', function () {
     return view('Register'); // Modifica aquí el nombre de la vista
 })->name('registro.show'); // Vista del formulario de registro
 Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
+
+Route::get('/Coupon/Users', [CouponController::class, 'getCoupon'])->name('coupon');
