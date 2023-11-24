@@ -10,9 +10,7 @@
     <title>PopBurst</title>
 </head>
 <body>
-    <!-- NAVBAR CREATION -->
-   <header class="header">
-    
+
    </header>
     <!-- LOGIN FORM CREATION -->
     <div class="background"></div>
