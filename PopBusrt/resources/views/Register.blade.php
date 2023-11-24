@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-
     <style>
         :root {
             --color-dark: #15181f;
@@ -26,11 +24,23 @@
             font-weight: 300;
             background-color: var(--color-grey);
             color: var(--color-light);
-            letter-spacing: .05rem;
-            margin: 0;
-            padding: 0;
         }
 
+
+
+        .img-fluid.animate-image {
+          
+            background-size: contain;
+            background-position: center;
+            width: 70%;
+            height: 70%;
+        }
+
+        .contact-box {
+             padding: 1.5rem;
+             max-width: 1000px;
+             margin: 0 auto;
+}
         .bg-light {
             background-color: var(--color-light)!important;
         }
@@ -40,29 +50,15 @@
         }
 
         .p-6 {
-            padding: 2rem;
+            padding: 1rem;
         }
 
-        .img-fluid.animate-image {
-            background: url('img/logo.png') no-repeat;
-            background-size: contain;
-            background-position: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        .contact-box {
-            padding: 1.5rem;
-            max-width: 1000px; 
-            min-height: 800px;
-            margin: 0 auto;
-            border-radius: 10px;
-        }
 
         .box {
             border: 1px solid var(--color-dark);
             border-radius: 10px;
             margin-bottom: 10px;
+            line-height: 0.8;
         }
 
         .animate-image {
@@ -98,7 +94,7 @@
             }
 
             .width-100 {
-                width: 100%;
+                width: 0%;
             }
         }
 
@@ -136,7 +132,7 @@
         <div class="row no-gutters bg-dark row-no-gutters-dark">
             <div class="col-lg-6 d-flex">
                 <div class="container align-self-center p-3 p-md-5 box">
-                    <img src="img/logo.png" alt="Imagen" class="img-fluid animate-image">
+                    <img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid animate-image">
                     <h1 class="font-weight-bold mb-3">Register PopBurst</h1>
                     <div class="form-group">
                         <button  class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i class="icon ion-logo-github lead align-middle mr-2"></i> Github</button>
@@ -199,7 +195,7 @@
                             <input type="text" class="form-control" placeholder="Tu dirección principal">
                         </div>
                         <div class="form-group mb-3">
-                            <label class="font-weight-bold">Direcciones de Envío</label>
+                            <label class="font-weight-bold">Dirección de Envío</label>
                             <textarea class="form-control" placeholder="Tus direcciones de envío"></textarea>
                         </div>
                         <div class="form-group mb-5">

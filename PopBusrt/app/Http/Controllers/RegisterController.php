@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use GuzzleHttp\Client;
 
 class RegistroController extends Controller
 {
@@ -33,7 +34,43 @@ class RegistroController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-    // Después de registrar al usuario, redirige a la página del formulario con un mensaje de éxito
-    return redirect('/')->with('success', '¡Registro exitoso!')->withInput();
-}
+
+        // Después de la validación, registra al usuario en tu base de datos
+        $usuario = new User();
+        $usuario->nombre = $request->input('name');
+        // Añade otros campos según tu modelo de usuario
+
+        $usuario->save();
+
+        // Llamada a la API después de registrar al usuario
+        $this->callApi($request->all());
+
+        // Después de registrar al usuario, redirige a la página del formulario con un mensaje de éxito
+        return redirect('/')->with('success', '¡Registro exitoso!')->withInput();
+    }
+
+    /**
+     * Call the API after registering the user.
+     *
+     * @param  array  $userData
+     * @return void
+     */
+    protected function callApi(array $userData)
+    {
+        $client = new Client();
+
+        // URL de tu API
+        $apiUrl = 'https://tu-api.com/endpoint';
+
+        // Realizar la solicitud a la API
+        $response = $client->post($apiUrl, [
+            'json' => $userData,
+        ]);
+
+        // Manejar la respuesta de la API según tus necesidades
+        $apiResponse = json_decode($response->getBody(), true);
+
+        // Puedes loggear la respuesta o realizar otras acciones si es necesario
+        \Log::info('API Response: ' . print_r($apiResponse, true));
+    }
 }
