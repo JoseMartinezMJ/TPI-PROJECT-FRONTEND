@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -16,10 +17,16 @@ class AdminController extends Controller
         return view('Admin_New_User');
     }
 
+    public function updateUser(User $user)
+    {
+        return view('Admin_Update_User', ['user' => $user]);
+    }
+
     public function getProducts()
     {
         return view('Admin_Products');
     }
 
+    
     
 }

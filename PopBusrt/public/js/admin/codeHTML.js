@@ -24,8 +24,8 @@ export const drawUsers = (users) => {
             <td>${user.main_addr}</td>
             <td>${rol}</td>
             <td>
-                <a href="#" class="btn btn-outline-success m-1">Editar</a>
-                <button type="submit" class="btn btn-outline-danger" onclick="destroyUser(${user.id})">Eliminar</button>
+                <a href="http://127.0.0.1:8001/Admin/Users/${user.id}" class="btn btn-outline-success m-1">Editar</a>
+                <button type="submit" class="btn btn-outline-danger" onclick="detachUserCoupon(${user.id}, ${user.discount[0].id})">Eliminar</button>
             </td>
         `;
 
