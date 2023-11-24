@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImagenController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Http\Request;
 
 /*
@@ -38,9 +39,20 @@ Route::get('/Footer', function () {
 Route::get('/User', function () {
     return view('User');
 });
+// Establece una ruta GET para la URL '/User', que retorna la vista 'User.blade.php'
+Route::get('/Products', function () {
+    return view('Products');
+});
+// Establece una ruta GET para la URL '/RegisterProducts', que retorna la vista 'RegisterProducts.blade.php'
+Route::get('/RegisterProducts', function () {
+    return view('RegisterProducts');
+});
 // Establece una ruta GET para la URL '/Admin', que retorna la vista 'Admin.blade.php'
 Route::get('/Admin', function () {
     return view('Admin');
 });
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
+
+
+Route::get('/buscar-productos', [ProductoController::class, 'buscarProductos'])->name('buscar.productos');
