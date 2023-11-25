@@ -5,6 +5,7 @@ use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
 
 /*
@@ -77,3 +78,7 @@ Route::get('/Register', function () {
 })->name('registro.show'); // Vista del formulario de registro
 Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
 
+
+//Muestra las categorias
+Route::get('/categories', [CategoryController::class, 'getCategory'])->name('admin.categories');
+Route::get('/categories/Create', [CategoryController::class, 'CreateCategory'])->name('admin.categories.create');
