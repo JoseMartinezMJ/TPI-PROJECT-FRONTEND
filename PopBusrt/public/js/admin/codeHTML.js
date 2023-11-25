@@ -1,5 +1,3 @@
-import { User } from "./UserClass.js";
-
 export const drawUsers = (users) => {
     const Tbody = document.querySelector('[data-users]');
     users.forEach(user => {
@@ -26,6 +24,29 @@ export const drawUsers = (users) => {
             <td>
                 <a href="http://127.0.0.1:8001/Admin/Users/${user.id}" class="btn btn-outline-success m-1">Editar</a>
                 <button type="submit" class="btn btn-outline-danger" onclick="detachUserCoupon(${user.id}, ${user.discount[0].id})">Eliminar</button>
+            </td>
+        `;
+
+        tr.innerHTML = row;
+        Tbody.appendChild(tr);
+    });
+}
+
+export const drawSuppliers = (suppliers) => {
+    const Tbody = document.querySelector('[data-supplier]');
+    suppliers.forEach(supplier => {
+        const tr = document.createElement('tr');
+        tr.classList.add('table-primary');
+
+        let row = '';
+
+        row += `
+            <td scope="row">${supplier.id}</td>
+            <td>${supplier.name_supplier}</td>
+            <td>${supplier.supplier_contact}</td>
+            <td>
+                <a href="http://127.0.0.1:8001/Admin/Users/${supplier.id}" class="btn btn-outline-success m-1">Editar</a>
+                <button type="submit" class="btn btn-outline-danger">Eliminar</button>
             </td>
         `;
 

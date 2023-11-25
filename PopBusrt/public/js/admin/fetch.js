@@ -158,9 +158,113 @@ export const updateUser = (user) => {
     });
 }
 
+export const getSupplier = async() => {
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/supplier');
+        //Verifica si la respuesta NO es correcta
+        if (!response.ok) {
+            throw new Error("Error 404");//En caso de no haberse recuelto, genera un error
+        }
+        return response.json();//Si se la promesa fue resuelta, retorna la respuesta con formato JSON
+    } catch {
+        return null;//Si ocurre algún error, retorna null
+    }
+}
+
+export const createSupplier = async(name, email) => {
+    const newSupplier = {
+        name_supplier: name,
+        supplier_contact: email
+    };
+
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/supplier', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSupplier)
+        });
+        //Verifica si la respuesta NO es correcta
+        if (!response.ok) {
+            throw new Error("Error 404");//En caso de no haberse recuelto, genera un error
+        }
+        return response.json();//Si se la promesa fue resuelta, retorna la respuesta con formato JSON
+    } catch {
+        return null;//Si ocurre algún error, retorna null
+    }
+}
+
 export const getProducts = async() => {
     try {
         const response = await fetch('http://127.0.0.1:8000/api/products');
+        //Verifica si la respuesta NO es correcta
+        if (!response.ok) {
+            throw new Error("Error 404");//En caso de no haberse recuelto, genera un error
+        }
+        return response.json();//Si se la promesa fue resuelta, retorna la respuesta con formato JSON
+    } catch {
+        return null;//Si ocurre algún error, retorna null
+    }
+}
+
+export const createProduct = async(newProduct) => {
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/products', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newProduct)
+        });
+        //Verifica si la respuesta NO es correcta
+        if (!response.ok) {
+            throw new Error("Error 404");//En caso de no haberse recuelto, genera un error
+        }
+        return response.json();//Si se la promesa fue resuelta, retorna la respuesta con formato JSON
+    } catch {
+        return null;//Si ocurre algún error, retorna null
+    }
+}
+
+export const attachProductCategory = async(category_id, product_id) => {
+    const product_category = {
+        category_id: category_id,
+        product_id: product_id
+    }
+
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/products/category', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(product_category)
+        });
+        //Verifica si la respuesta NO es correcta
+        if (!response.ok) {
+            throw new Error("Error 404");//En caso de no haberse recuelto, genera un error
+        }
+        return response.json();//Si se la promesa fue resuelta, retorna la respuesta con formato JSON
+    } catch {
+        return null;//Si ocurre algún error, retorna null
+    }
+}
+
+export const attachProductSupplier = async(supplier_id, product_id) => {
+    const product_supplier = {
+        product_id: product_id,
+        supplier_id: supplier_id
+    }
+
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/products/supplier', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(product_supplier)
+        });
         //Verifica si la respuesta NO es correcta
         if (!response.ok) {
             throw new Error("Error 404");//En caso de no haberse recuelto, genera un error
