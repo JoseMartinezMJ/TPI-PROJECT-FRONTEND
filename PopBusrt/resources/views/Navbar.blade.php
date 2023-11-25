@@ -18,7 +18,7 @@
                         <li><i class='bx bxs-home'></i><a href="#home">Inicio</a></li>
                         <li><i class='bx bxs-shopping-bag-alt' ></i><a href="#About blog">Productos</a></li>
                         <li><i class='bx bxs-phone-call' ></i><a href="#footer"> Contacto</a></li>
-                        <li class="elemento-login"><i class='bx bx-log-in' ></i><a href="./html/Login.html" class="text-login">Iniciar Sesión</a></li>
+                        <li class="elemento-login"><i class='bx bx-log-in' ></i><a href="/Login" class="text-login">Iniciar Sesión</a></li>
                     </ul>
                 </nav>
             </div>
