@@ -65,3 +65,6 @@ Route::get('/Register', function () {
     return view('Register'); // Modifica aquí el nombre de la vista
 })->name('registro.show'); // Vista del formulario de registro
 Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
+//ruta de la wishlist de cada usuario
+Route::get('/api/users/{userId}/wishlist', 'AdminController@getUserWishlist');
+

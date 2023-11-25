@@ -23,7 +23,7 @@
 </div>
 
 <!-----contenedor de lista de deseos----->
-<div class="container-fluid contenedor">
+<div class="container-fluid contenedor" data-wishlist>
     <!-----contenedor del encabezado----->
     <div class="row contenedor-fecha">
         <div class="col-2">
@@ -61,7 +61,7 @@
     </div>
 
 </div>    
-
+<script src="{{ asset('js/wishlist/wishlist.js') }}" type="module"></script>
 </body>
 @include('Footer')
 </html>
