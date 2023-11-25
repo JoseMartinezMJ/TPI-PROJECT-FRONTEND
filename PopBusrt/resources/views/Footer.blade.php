@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      html{
+        min-height: 100%;
+        position: relative:
+      }
+      footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+
     <title>Document</title>
 </head>
 <body>

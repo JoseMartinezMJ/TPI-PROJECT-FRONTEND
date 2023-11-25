@@ -18,7 +18,13 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// historial de compras
+Route::get('/historialCompras', function () {
+    return view('historialCompras');
+});
+Route::get('/listaDeseo', function () {
+    return view('listaDeseo');
+});
 Route::get('/welcome', function () {
     return view('welcome');
 });
@@ -82,8 +88,14 @@ Route::get('/Register', function () {
 })->name('registro.show'); // Vista del formulario de registro
 Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
 
+//ruta de la wishlist de cada usuario
+Route::get('/api/users/{userId}/wishlist', 'AdminController@getUserWishlist');
+
+
+
 
 //Muestra las categorias
 Route::get('/Admin/Categories', [CategoryController::class, 'getCategory'])->name('admin.categories');
 Route::get('/Admin/Categories/Create', [CategoryController::class, 'CreateCategory'])->name('admin.categories.create');
 Route::get('/Admin/Categories/{category}', [CategoryController::class, 'updateCategory'])->name('admin.category.update');
+
