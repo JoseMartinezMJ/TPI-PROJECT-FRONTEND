@@ -5,7 +5,6 @@
     <!-----===== Boxicons CSS =====----->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Agrega el script de validación -->
-<script src="{{ asset('js/validation.js') }}"></script>
     <meta charset="UTF-8">
     <title>PopBurst</title>
 </head>
@@ -39,8 +38,8 @@
                         <h2>Sign In</h2>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope'></i></span>
-                        <input type="email" required>
-                        <label>Email</label>
+                        <input type="User" required>
+                        <label>User</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
@@ -62,5 +61,6 @@
                     </div>
                     
     </div>
+    <script src="{{ asset('js/validation.js') }}"></script>
 </body>
 </html>
