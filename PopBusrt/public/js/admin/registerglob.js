@@ -94,10 +94,11 @@ function validateForm() {
 }
 
 function isValidName(name) {
-    // Expresión regular para validar que el nombre solo contiene letras y tiene al menos 3 caracteres
-    var nameRegex = /^[a-zA-Z]{3,}$/;
+    // Expresión regular para validar que el nombre solo contiene letras y espacios, y tiene al menos 3 caracteres
+    var nameRegex = /^[a-zA-Z\s]{3,}$/;
     return nameRegex.test(name);
 }
+
 
 function handleAlert(type, message) {
     setTimeout(() => {
