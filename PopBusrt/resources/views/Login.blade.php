@@ -38,7 +38,7 @@
                         <h2>Sign In</h2>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope'></i></span>
-                        <input type="User" required>
+                        <input type="Text" required>
                         <label>User</label>
                     </div>
                     <div class="input-box">

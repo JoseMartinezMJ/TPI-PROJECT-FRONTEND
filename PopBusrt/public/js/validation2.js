@@ -1,63 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Escucha el evento submit del formulario
-    document.querySelector("form").addEventListener("submit", function (event) {
-        // Realiza las validaciones cuando se envía el formulario
-        if (!validateName() || !validateLastName() || !validateAge() || !validateUsername() || !validateCountry()) {
-            // Detiene el envío del formulario si las validaciones fallan
-            event.preventDefault();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Agrega un evento 'submit' al formulario
+        document.querySelector('form').addEventListener('submit', function (event) {
+            // Llama a la función de validación antes de enviar el formulario
+            if (!validateForm()) {
+                // Si la validación falla, evita que el formulario se envíe
+                event.preventDefault();
+            }
+        });
+
+        function validateForm() {
+
+            var name = document.querySelector('[data-name]').value;
+            var email = document.querySelector('[data-email]').value;
+            var password = document.querySelector('[data-password]').value;
+            // Agrega más campos según sea necesario
+
+            // Verifica si algún campo requerido está vacío
+            if (name === '' || email === '' || password === '') {
+                // Muestra un mensaje de error
+                alert('Por favor, completa todos los campos obligatorios.');
+                return false; // La validación falla
+            }
+            // Obtiene el valor de la contraseña
+            var password = document.querySelector('[data-password]').value;
+
+            // Verifica si la contraseña tiene al menos 9 caracteres
+            if (password.length <= 8) {
+                alert('La contraseña debe tener más de 8 caracteres.');
+                return false; // La validación falla
+            }
+
+            // Verifica si la contraseña contiene espacios
+            if (/\s/.test(password)) {
+                alert('La contraseña no debe contener espacios.');
+                return false; // La validación falla
+            }
+
+            // Verifica si la contraseña contiene al menos un símbolo
+            var symbols = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+            if (!symbols.test(password)) {
+                alert('La contraseña debe contener al menos un símbolo.');
+                return false; // La validación falla
+            }
+
+            // Puedes agregar más lógica de validación aquí según tus necesidades
+
+            return true; // La validación es exitosa
         }
     });
-
-    function validateName() {
-        // Validación del nombre (debe contener solo letras)
-        let name = document.querySelector("#name").value;
-        let regex = /^[A-Za-z]+$/;
-        if (!regex.test(name)) {
-            alert("El nombre solo debe contener letras");
-            return false;
-        }
-        return true;
-    }
-
-    function validateLastName() {
-        // Validación del apellido (debe contener solo letras)
-        let lastName = document.querySelector("#lastName").value;
-        let regex = /^[A-Za-z]+$/;
-        if (!regex.test(lastName)) {
-            alert("El apellido solo debe contener letras");
-            return false;
-        }
-        return true;
-    }
-
-    function validateAge() {
-        // Validación de la edad (no debe ser negativa)
-        let age = document.querySelector("#age").value;
-        if (parseInt(age) < 0) {
-            alert("La edad no puede ser negativa");
-            return false;
-        }
-        return true;
-    }
-
-    function validateUsername() {
-        // Validación del usuario (máximo 8 caracteres)
-        let username = document.querySelector("#username").value;
-        if (username.length > 8) {
-            alert("El usuario debe tener como máximo 8 caracteres");
-            return false;
-        }
-        return true;
-    }
-
-    function validateCountry() {
-        // Validación del país (solo letras, sin números ni caracteres especiales)
-        let country = document.querySelector("#country").value;
-        let regex = /^[A-Za-z]+$/;
-        if (!regex.test(country)) {
-            alert("El país solo debe contener letras");
-            return false;
-        }
-        return true;
-    }
-});
