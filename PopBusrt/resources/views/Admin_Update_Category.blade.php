@@ -1,10 +1,10 @@
 @extends('Admin')
 
 @section('title')
-Categorias
+Usuarios
 @endsection
 
-@section('content')
+@section('styles')
 <style>
     :root {
         --color-dark: #15181f;
@@ -126,6 +126,12 @@ Categorias
         color: var(--color-light);
     }
 </style>
+@endsection
+
+@section('content')
+<div class="container" data-alert>
+			
+</div>
 <div class="container">
       <form>
         <div class="form-group">
@@ -140,6 +146,5 @@ Categorias
 </div>
 <div class="container" data-alert>			
 </div>
-
-<script src="{{ asset('js/category/storeCategory.js') }}" type="module"></script>
+<script src="{{ asset('js/admin/updateCategory.js') }}" type="module"></script>
 @endsection

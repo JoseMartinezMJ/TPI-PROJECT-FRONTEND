@@ -34,3 +34,62 @@ export const createCategory = async(category) => {
         return null;//Si ocurre algún error, retorna null
     }
 }
+
+export const updateCategory = (category) => {
+    const newUser = {
+        id: category.id,
+        category_name: category.name,
+
+    };
+
+    // Enviar la solicitud POST
+    fetch('http://127.0.0.1:8000/api/categories/' + category.id, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newUser)
+    })
+    .then(response => {
+
+        if (response.ok) {
+
+            //CREA EL REGISTRO EN LA TABLA DE DESCUENTOS Y ASOCIA AL NUEVO USUARIO
+
+
+            //MUESTRA QUE SE HA REGISTRADO CON EXITO
+            let message = "La categoria fue actualizado exitosamente :D";
+            const containerAlert = document.querySelector('[data-alert]');
+            let alertContent = '';
+            alertContent += `
+                <div class="alert alert-success" role="alert">
+                    ${message}
+                </div>
+            `;
+            containerAlert.innerHTML = alertContent;
+            setTimeout(() => {
+                //window.location.href = "../../../resources/views/Admin_Users.blade.php";
+                location.reload();
+            }, 4000);
+
+        } else {
+            let message = "Parece que tuvimos un problema al intentar actualizar la categoria, por favor intentalo más tarde.";
+            setTimeout(() => {
+                //window.location.href = "{{route('admin.users')}}";
+                location.reload();
+            }, 4000);
+
+            const containerAlert = document.querySelector('[data-alert]');
+            let alertContent = '';
+            alertContent += `
+                <div class="alert alert-danger" role="alert">
+                    ${message}
+                </div>
+            `;
+            containerAlert.innerHTML = alertContent;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
