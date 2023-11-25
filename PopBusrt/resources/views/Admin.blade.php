@@ -10,6 +10,8 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!-----===== Bootstrap CSS =====----->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  @yield('styles')
+
   <title>PopBurst</title>
 </head>
 
@@ -24,42 +26,42 @@
       <li>
         <i class="bx bx-search search-btn"></i>
         <input type="text" placeholder="search..." />
-        <span class="tooltip">Search</span>
+        <span class="tooltip">Buscar</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{route('admin.users')}}">
           <i class="bx bxs-user-account -alt-2"></i>
-          <span class="title">Users</span>
+          <span class="title">Usuarios</span>
         </a>
-        <span class="tooltip">Users</span>
+        <span class="tooltip">Usuarios</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{route('admin.product')}}">
           <i class="bx bxs-t-shirt"></i>
-          <span class="title">Products</span>
+          <span class="title">Productos</span>
         </a>
-        <span class="tooltip">Products</span>
+        <span class="tooltip">Productos</span>
       </li>
       <li>
         <a href="#">
           <i class="bx bxs-coupon -alt"></i>
-          <span class="title">Coupons</span>
+          <span class="title">Coupones</span>
         </a>
-        <span class="tooltip">Coupons</span>
+        <span class="tooltip">Coupones</span>
       </li>
       <li>
         <a href="#">
           <i class="bx bx-shopping-bag"></i>
-          <span class="title">Orders</span>
+          <span class="title">Pedidos</span>
         </a>
-        <span class="tooltip">Orders<</span>
+        <span class="tooltip">Pedidos<</span>
       </li>
       <li>
         <a href="#">
           <i class="bx bx-log-out"></i>
-          <span class="title">Logout</span>
+          <span class="title">Cerrar sesión</span>
         </a>
-        <span class="tooltip">Logout<</span>
+        <span class="tooltip">Cerrar sesión<</span>
       </li>
     </ul>
     <div class="theme-wrapper">
@@ -71,7 +73,7 @@
     </div>
   </section>
   <section class="home">
-    <p>Admin Dashboard</p>
+    <p>Admin Dashboard - @yield('title')</p>
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
@@ -81,6 +83,10 @@
     <button type="button" class="btn btn-light">Light</button>
     <button type="button" class="btn btn-dark">Dark</button>
     <button type="button" class="btn btn-link">Link</button>
+
+    <section class="container-data">
+      @yield('content')
+    </section>
   </section>
   <!-- Fin de estructura SideBar Menu -->
   <!-- Inicio de estructura para la seccion o el contenido de User.blade.php -->
