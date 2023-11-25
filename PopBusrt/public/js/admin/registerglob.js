@@ -52,7 +52,7 @@ btnSave.addEventListener('click', async(e) => {
                 handleAlert('success', message);
                 setTimeout(() => {
                     // Redirección a la página de inicio
-                    window.location.href = "/PopBurst";
+                    window.location.href = "/";
                 }, 4000);
             } else {
                 let message = "Parece que tuvimos un problema al intentar asignarle el cupón al usuario, por favor inténtalo más tarde.";

@@ -51,9 +51,9 @@
                         <a style="color: white;" href="#">Forget Password</a>
                     </div>
                     <button class="btn">Login In</button>
-                    <a style="color: white;" href="#" class="guest-login">Login as Guest</a>
+                    <a style="color: white;" href="/PopBurst" class="guest-login">Login as Guest</a>
                     <div class="create-account">
-                        <p>Create A New Account? <a style="color: white;" href="#" class="register-link">Sign Up</a></p>
+                        <p>Create A New Account? <a style="color: white;" href="/Register" class="register-link">Sign Up</a></p>
                     </div>
                 </form>
             </div>
