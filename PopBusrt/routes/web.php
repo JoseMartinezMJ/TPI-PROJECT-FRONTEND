@@ -86,3 +86,4 @@ Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name(
 //Muestra las categorias
 Route::get('/Admin/Categories', [CategoryController::class, 'getCategory'])->name('admin.categories');
 Route::get('/Admin/Categories/Create', [CategoryController::class, 'CreateCategory'])->name('admin.categories.create');
+Route::get('/Admin/Categories/{category}', [CategoryController::class, 'updateCategory'])->name('admin.category.update');

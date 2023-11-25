@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -17,9 +17,9 @@ class CategoryController extends Controller
         return view('Admin_New_Category');
     }
 
-    public function updateUser(User $user)
+    public function updateCategory(Category $category)
     {
-        return view('Admin_Update_User', ['user' => $user]);
+        return view('Admin_Update_Category', ['category' => $category]);
     }
 
     public function getProducts()
