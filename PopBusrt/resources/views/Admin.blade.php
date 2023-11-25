@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-----===== css =====----->
   <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesProducts.css') }}">
   <!-----===== Boxicons CSS =====----->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!-----===== Bootstrap CSS =====----->
@@ -50,11 +51,11 @@
         <span class="tooltip">Coupones</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{route('admin.supplier')}}">
           <i class="bx bx-shopping-bag"></i>
-          <span class="title">Pedidos</span>
+          <span class="title">Proveedores</span>
         </a>
-        <span class="tooltip">Pedidos<</span>
+        <span class="tooltip">Proveedores<</span>
       </li>
       <li>
         <a href="#">

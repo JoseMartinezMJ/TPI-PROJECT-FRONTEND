@@ -27,5 +27,18 @@ class AdminController extends Controller
         return view('Admin_Products');
     }
 
-    
+    public function createProduct()
+    {
+        return view('Admin_New_Product');
+    }
+
+    public function getSuppliers()
+    {
+        return view('Admin_Supplier');
+    }
+
+    public function createSupplier()
+    {
+        return view('Admin_New_Supplier');
+    }
 }

@@ -48,6 +48,7 @@ Route::get('/Products', function () {
 Route::get('/RegisterProducts', function () {
     return view('RegisterProducts');
 });
+Route::get('/Admin/Products/Create', [AdminController::class, 'createProduct'])->name('admin.product.create');
 Route::get('/Historial', function () {
     return view('Historial');
 });
@@ -56,6 +57,9 @@ Route::get('/Historial', function () {
 Route::get('/Admin', function () {
     return view('Admin');
 });
+
+Route::get('/Admin/Supplier', [AdminController::class, 'getSuppliers'])->name('admin.supplier');
+Route::get('/Admin/Supplier/Create', [AdminController::class, 'createSupplier'])->name('admin.supplier.create');
 
 //Muestra todos los usuarios en una tabla
 Route::get('/Admin/Users', [AdminController::class, 'getUsers'])->name('admin.users');
@@ -80,5 +84,5 @@ Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name(
 
 
 //Muestra las categorias
-Route::get('/categories', [CategoryController::class, 'getCategory'])->name('admin.categories');
-Route::get('/categories/Create', [CategoryController::class, 'CreateCategory'])->name('admin.categories.create');
+Route::get('/Admin/Categories', [CategoryController::class, 'getCategory'])->name('admin.categories');
+Route::get('/Admin/Categories/Create', [CategoryController::class, 'CreateCategory'])->name('admin.categories.create');

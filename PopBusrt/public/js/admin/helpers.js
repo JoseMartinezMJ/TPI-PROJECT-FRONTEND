@@ -9,7 +9,8 @@ const destroyUser = (user_id) => {
             let message = "El usuario fue eliminado exitosamente :D";
 
             setTimeout(() => {
-                location.reload();
+                //location.reload();
+                window.location.href = "http://127.0.0.1:8001/Admin/Users";
             }, 4000);
 
             const containerAlert = document.querySelector('[data-alert]');

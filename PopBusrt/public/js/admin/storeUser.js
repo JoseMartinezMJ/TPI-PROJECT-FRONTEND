@@ -60,13 +60,13 @@ btnSave.addEventListener('click', async(e) => {
                 `;
                 containerAlert.innerHTML = alertContent;
                 setTimeout(() => {
-                    //window.location.href = "../../../resources/views/Admin_Users.blade.php";
-                    location.reload();
+                    window.location.href = "http://127.0.0.1:8001/Admin/Users";
+                    //location.reload();
                 }, 4000);
             } else {
                 let message = "Parece que tuvimos un problema al intentar asignarle el cupon al usuario, por favor intentalo más tarde.";
                 setTimeout(() => {
-                    //window.location.href = "{{route('admin.users')}}";
+                    window.location.href = "http://127.0.0.1:8001/Admin/Users";
                     //location.reload();
                 }, 4000);
         
@@ -82,8 +82,8 @@ btnSave.addEventListener('click', async(e) => {
         } else {
             let message = "Parece que tuvimos un problema al intentar crear el cupon del usuario, por favor intentalo más tarde.";
             setTimeout(() => {
-                //window.location.href = "{{route('admin.users')}}";
-                location.reload();
+                window.location.href = "http://127.0.0.1:8001/Admin/Users";
+                //location.reload();
             }, 4000);
     
             const containerAlert = document.querySelector('[data-alert]');
@@ -99,8 +99,8 @@ btnSave.addEventListener('click', async(e) => {
     } else {
         let message = "Parece que tuvimos un problema al intentar crear el usuario, por favor intentalo más tarde.";
         setTimeout(() => {
-            //window.location.href = "{{route('admin.users')}}";
-            location.reload();
+            window.location.href = "http://127.0.0.1:8001/Admin/Users";
+            //location.reload();
         }, 4000);
 
         const containerAlert = document.querySelector('[data-alert]');
