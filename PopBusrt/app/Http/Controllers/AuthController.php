@@ -19,5 +19,6 @@ class AuthConroller extends Controller{
         }
 
     }
+    
 
 }
