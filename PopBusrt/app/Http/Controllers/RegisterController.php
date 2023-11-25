@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Validator;
-use GuzzleHttp\Client;
 
 class RegistroController extends Controller
 {
@@ -34,5 +34,14 @@ class RegistroController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
+         // Lógica para crear un nuevo usuario
+    $nuevoUsuario = new User();
+    $nuevoUsuario->nombre = $request->input('nombre');
+    $nuevoUsuario->edad = $request->input('edad');
+    // ... (otros campos)
+    $nuevoUsuario->save();
+
+    // Puedes redirigir al usuario a la ruta deseada
+    return redirect('/Register'); // Ajusta la ruta según tu estructura
     }
 }

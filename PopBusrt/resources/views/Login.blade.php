@@ -24,7 +24,7 @@
                 <h2>Welcome! <br><span>
                     Merch Online
                 </span></h2>
-                <p>Lorem ipsum dolor sit amet </p>
+                <p></p>
                 <div class="social-icon">
                     <a  href="#"><i class='bx bxl-facebook'></i></a>
                     <a  href="https://github.com/JoseMartinezMJ/TPI-PROJECT-FRONTEND/tree/Jose-Martinez"><i class='bx bxl-github'></i></a>
