@@ -8,7 +8,7 @@
     <style>
       html{
         min-height: 100%;
-        position: relative:
+        position: relative;
       }
       footer{
         position: absolute;
@@ -24,7 +24,6 @@
   <div class="container-footer" id="footer">	  
             <footer>
                 <div class="logo-footer">
-                    <img src="{{ asset('img/logo.png') }}" alt="logo">
                 </div>
                 <div class="redes-footer">
                     <a href="https://www.facebook.com/"><i class="bx bxl-facebook-circle icon-redes-footer"></i></a>

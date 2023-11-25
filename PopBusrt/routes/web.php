@@ -29,7 +29,7 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 // Establece una ruta GET para la URL '/PopBurst', que retorna la vista 'PopBurst.blade.php'
-Route::get('/PopBurst', function () {
+Route::get('/', function () {
     return view('PopBurst');
 });
 Route::get('/Navbar', function () {
