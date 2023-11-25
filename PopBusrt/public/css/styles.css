@@ -292,5 +292,11 @@
   margin: 20px;
   white-space: nowrap;
 }
+
+.container-data {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
 /*Fin de estilos para sidebar menu de User.blade.php y Admin.blade.php*/
 

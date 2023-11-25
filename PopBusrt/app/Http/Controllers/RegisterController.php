@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 
 class RegistroController extends Controller
@@ -33,7 +34,14 @@ class RegistroController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-    // Después de registrar al usuario, redirige a la página del formulario con un mensaje de éxito
-    return redirect('/')->with('success', '¡Registro exitoso!')->withInput();
-}
+         // Lógica para crear un nuevo usuario
+    $nuevoUsuario = new User();
+    $nuevoUsuario->nombre = $request->input('nombre');
+    $nuevoUsuario->edad = $request->input('edad');
+    // ... (otros campos)
+    $nuevoUsuario->save();
+
+    // Puedes redirigir al usuario a la ruta deseada
+    return redirect('/Register'); // Ajusta la ruta según tu estructura
+    }
 }
