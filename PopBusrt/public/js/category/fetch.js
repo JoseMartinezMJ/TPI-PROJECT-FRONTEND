@@ -12,10 +12,8 @@ export const getCategory = async() => {
 }
 export const createCategory = async(category) => {
     const newCategory = {
-        name: category.name,
-        username: category.username,
-        email: category.email,
-        age: category.age,
+        category_name: category.category_name
+
 
     };
 

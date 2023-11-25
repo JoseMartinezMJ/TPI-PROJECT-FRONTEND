@@ -1,10 +1,4 @@
-@extends('Admin')
 
-@section('title')
-Usuarios
-@endsection
-
-@section('styles')
 <style>
     :root {
         --color-dark: #15181f;
@@ -126,9 +120,7 @@ Usuarios
         color: var(--color-light);
     }
 </style>
-@endsection
 
-@section('content')
 <div class="container" data-alert>
 			
 </div>
@@ -142,7 +134,7 @@ Usuarios
                     <form>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Nombre Categoria <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingrese la categoria" required data-name>
+                            <input type="text" class="form-control" placeholder="Ingrese la categoria" required data-category_name>
                         </div>
 
                             
@@ -159,5 +151,4 @@ Usuarios
            </div>
        </div>
    </section>
-<script src="{{ asset('js/admin/storeUser.js') }}" type="module"></script>
-@endsection
+<script src="{{ asset('js/category/storeCategory.js') }}" type="module"></script>
