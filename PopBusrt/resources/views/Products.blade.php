@@ -25,63 +25,63 @@
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">Marvel Azul</span>
-                <img src="img/Camisa-Marvel-Azul.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Camisa-Marvel-Azul.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$15.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">Marvel Gris</span>
-                <img src="img/Camisa-Marvel-Gris.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Camisa-Marvel-Gris.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$25.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">Marvel Negra</span>
-                <img src="img/Camisa-Marvel-Negra.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Camisa-Marvel-Negra.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$35.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">Marvel Roja</span>
-                <img src="img/Camisa-Marvel-Roja.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Camisa-Marvel-Roja.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$18.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">DC-1</span>
-                <img src="img/Zapatos-DC-1.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Zapatos-DC-1.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$32.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">DC-2</span>
-                <img src="img/Zapatos-DC-2.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Zapatos-DC-2.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$18.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">DC-3</span>
-                <img src="img/Zapatos-DC-3.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Zapatos-DC-3.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$54.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">DC-4</span>
-                <img src="img/Zapatos-DC-4.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Zapatos-DC-4.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$32.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <i class='bx bx-heart' style='float: right; color:green; font-size:20px;'></i>
                 <span class="titulo-item">Funko Groot</span>
-                <img src="img/Funko-Groot.png" alt="" class="img-item img-thumbnail">
+                <img src="../img/Funko-Groot.png" alt="" class="img-item img-thumbnail">
                 <span class="precio-item">$42.800</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
