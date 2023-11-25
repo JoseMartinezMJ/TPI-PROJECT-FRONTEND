@@ -5,6 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
 }
 /*Inicio de estilos para el menu*/
 header{
@@ -48,7 +49,8 @@ header{
 }
 
 .menu nav ul li{
-    height: 100%;
+    height: 40px;
+    width: 155px;
     margin: 0px 20px;
     display: flex;
     justify-content: center;
@@ -58,12 +60,16 @@ header{
 .menu nav ul li i{
     color: white;
 }
+.menu nav ul li:hover{
+    background: red;
+    border-radius: 20px;
+}
 
 .menu nav ul li a{
     padding: 5px;
     margin: 5px;
     color: #777777;
-    font-size: 20px;
+    font-size: 18px;
     transition: color 300ms;
 }
 
@@ -73,14 +79,16 @@ header{
 .menu nav ul li .text-login{
     color: white;
 }
+
 .menu nav ul .elemento-login:hover{
-    background-color: #1d1b31;
+    background-color: #bf3324;
     border-radius: 20px;
     height: 40px;
     display: flex;
     align-items: center;
     padding: 5px;
     transition: color 300ms;
+    font-size: 20px;
 }
 .menu nav ul{
     display: flex;
@@ -100,7 +108,7 @@ header{
     top: 16px;
     padding: 10px;
     font-size: 20px;
-    background:#1d1b31;
+    background:#bf3324;;
     border-radius: 100%;
     color: white;
     display: none;
@@ -167,12 +175,13 @@ header{
 .container-info-cover a{
     text-decoration: none;
     color: white;
-    background-color: #1d1b31;
+    background-color:#bf3324;
     font-size: 20px;
     border-radius: 20px;
     margin: 15px;
     padding: 8px;
-    width: 110px;
+    width: 150px;
+    font-weight: 500;
 
 }
 /*Fin de estilos para la portada*/
@@ -319,7 +328,7 @@ p{
 .container-footer footer .redes-footer .icon-redes-footer{
     font-size: 20px;
     margin: 20px;
-    background: #1d1b31;;
+    background:#bf3324;;
     width: 50px;
     height: 50px;
     display: flex;
@@ -441,7 +450,12 @@ footer .redes-footer .fa-instagram:hover{
         height: 50px;
         display: flex;
         align-self: start;
-        
+        margin-top: 40px;
+        width: 200px;
+        margin: 0px 20px;
+        justify-content: flex-start;
+        position: relative;
+        margin-top: 40px;
     }
 
     .menu-selected:before{
@@ -468,31 +482,21 @@ footer .redes-footer .fa-instagram:hover{
         flex-wrap: wrap;
     }
     .menu nav ul li .text-login{
-        color:green;
+        color:white;
     } 
     .menu nav ul .elemento-login:hover{
-        background-color:green;
+        background-color:#bf3324;
         border-radius: 20px;
         height: 40px;
-        width: 110px;
+        width: 200px;
         display: flex;
         align-items: center;
         padding: 5px;
         transition: color 300ms;
     }
     .menu nav ul li a{
-        font-size: 20px;
+        font-size: 18px;
         margin: 5px;
     }
 }
 /* Fin del trabajo responsivo para cada elemento*/
-
-.c-item {
-    height: 480px;
-  }
-  
-.c-img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}

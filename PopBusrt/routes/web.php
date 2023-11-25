@@ -24,28 +24,35 @@ Route::get('/welcome', function () {
 Route::get('/PopBurst', function () {
     return view('PopBurst');
 });
-
-Route::get('/PopBurstInicio', function () {
-    return view('PopBurstInicio');
-});
 Route::get('/Navbar', function () {
     return view('Navbar');
 });
+// Establece una ruta GET para la URL '/Front-page', que retorna la vista 'Front-page.blade.php'
+Route::get('/Front-page', function () {
+    return view('Front-page');
+});
 Route::get('/Footer', function () {
     return view('Footer');
-});
-Route::get('/Historial', function () {
-    return view('Historial');
 });
 // Establece una ruta GET para la URL '/User', que retorna la vista 'User.blade.php'
 Route::get('/User', function () {
     return view('User');
 });
+// Establece una ruta GET para la URL '/User', que retorna la vista 'User.blade.php'
+Route::get('/Products', function () {
+    return view('Products');
+});
+// Establece una ruta GET para la URL '/RegisterProducts', que retorna la vista 'RegisterProducts.blade.php'
+Route::get('/RegisterProducts', function () {
+    return view('RegisterProducts');
+});
+Route::get('/Historial', function () {
+    return view('Historial');
+});
+
 // Establece una ruta GET para la URL '/Admin', que retorna la vista 'Admin.blade.php'
 Route::get('/Admin', function () {
     return view('Admin');
-
-
 });
 // Establece una ruta GET para la URL '/almacenar-imagen', dirigida a la acción 'almacenarImagen' del controlador 'ImagenController
 Route::get('/almacenar-imagen', [ImagenController::class, 'almacenarImagen']);
@@ -59,3 +66,4 @@ Route::get('/Register', function () {
     return view('Register'); // Modifica aquí el nombre de la vista
 })->name('registro.show'); // Vista del formulario de registro
 Route::post('/registro', [RegisterController::class, 'registrarUsuario'])->name('registro.registrar'); // Procesar el formulario de registro
+
