@@ -14,7 +14,7 @@ btnSave.addEventListener('click', async(e) => {
     let product_cost = document.querySelector('[data-cost]').value;
     let supplier_id = document.querySelector('[data-supplier]').value;
     let category_id = document.querySelector('[data-category]').value;
-    console.log(category_id + ', ' + supplier_id)
+   
     const newProduct = {
         name_product: name_product,
         description_product: description_product,
@@ -26,8 +26,7 @@ btnSave.addEventListener('click', async(e) => {
 
     //----> DESPUES DE VALIDAR TODO <----
     const productCreated = await createProduct(newProduct);
-
-    console.log('Product id: ' + productCreated.product.id)
+    console.log(productCreated);
 
     if (productCreated !== null) {
         //CREA LA RELACION ENTRE PRODUCTO Y EL PROVEEDOR Y LA CATEGORIA

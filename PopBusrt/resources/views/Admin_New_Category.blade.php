@@ -1,4 +1,10 @@
+@extends('Admin')
 
+@section('title')
+Categorias
+@endsection
+
+@section('content')
 <style>
     :root {
         --color-dark: #15181f;
@@ -120,35 +126,20 @@
         color: var(--color-light);
     }
 </style>
-
-<div class="container" data-alert>
-			
+<div class="container">
+      <form>
+        <div class="form-group">
+          <p><label for="nombre" class="h4">Nombre de la categoria:</label></p>
+          <input type="text" class="form-control h4" id="nombre" placeholder="Ingrese el nombre" required data-category_name>
+        </div>
+        
+        <div class="container text-center p-5">
+          <button type="submit" class="btn btn-outline-primary text-center" style="width: 150px; font: size 20px;" data-save>Registrar</button>
+        </div>
+      </form>
 </div>
-<section class="contact-box mt-4">
-    <form action="#" autocomplete="off">
-        <div class="row no-gutters bg-dark row-no-gutters-dark">
-            <div class="col-lg-6 d-flex">
-                <div class="container align-self-center p-3 p-md-5 box">
-                    <img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid animate-image">
-                    <h1 class="font-weight-bold mb-3">Registro PopBurst</h1>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label class="font-weight-bold">Nombre Categoria <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingrese la categoria" required data-category_name>
-                        </div>
+<div class="container" data-alert>			
+</div>
 
-                            
-                        </div>
-                   
-                </div>
-            </div>
-            
-                       
-                        <button class="btn btn-primary width-100" type="submit" data-save>Crear Categoria</button>
-                    </form>
-                    <small class="d-inline-block text-muted mt-3">Todos los derechos reservados | © 2023 PopBurst</small>
-                </div>
-           </div>
-       </div>
-   </section>
 <script src="{{ asset('js/category/storeCategory.js') }}" type="module"></script>
+@endsection

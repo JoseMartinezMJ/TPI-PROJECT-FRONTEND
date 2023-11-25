@@ -44,11 +44,11 @@
         <span class="tooltip">Productos</span>
       </li>
       <li>
-        <a href="#">
+      <a href="{{route('admin.categories')}}">
           <i class="bx bxs-coupon -alt"></i>
-          <span class="title">Coupones</span>
+          <span class="title">Categorias</span>
         </a>
-        <span class="tooltip">Coupones</span>
+        <span class="tooltip">Categorias</span>
       </li>
       <li>
         <a href="{{route('admin.supplier')}}">
@@ -75,16 +75,7 @@
   </section>
   <section class="home">
     <p>Admin Dashboard - @yield('title')</p>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-    <button type="button" class="btn btn-link">Link</button>
-
+    
     <section class="container-data">
       @yield('content')
     </section>

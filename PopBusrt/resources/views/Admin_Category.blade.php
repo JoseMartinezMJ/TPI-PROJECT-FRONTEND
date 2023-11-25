@@ -1,14 +1,14 @@
 @extends('Admin')
 
 @section('title')
-Usuarios
+Categorias
 @endsection
 
 @section('content')
 <div class="container" data-alert>
 			
 </div>
-<a href="{{route('admin.user.create')}}" type="submit" class="btn btn-outline-info">Crear Categoria</a>
+<a href="{{route('admin.categories.create')}}" type="submit" class="btn btn-outline-info">Crear Categoria</a>
 
 <div class="table-responsive mt-4">
 	<table class="table table-striped
