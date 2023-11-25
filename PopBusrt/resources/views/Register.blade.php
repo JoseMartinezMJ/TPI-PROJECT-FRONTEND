@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Agrega esta línea al encabezado del HTML -->
 <script src="{{ asset('js/validation2.js') }}"></script>
-
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
@@ -130,6 +128,9 @@
     <title>Register PopBurst</title>
   </head>
   <body>
+  <div class="container" data-alert>
+			
+            </div>
     <section class="contact-box">
     <form action="" autocomplete="off">
         <div class="row no-gutters bg-dark row-no-gutters-dark">
@@ -144,22 +145,19 @@
 
                     <form>
                         <div class="form-row mb-2">
-                            <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" placeholder="Tu nombre">
+                            <div class="form-group col-md-12">
+                                <label class="font-weight-bold">Nombre completo<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="Tu nombre" data-name>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Apellido <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" placeholder="Tu apellido">
-                            </div>
+                            
                         </div>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Correo electrónico <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" data-email>
                         </div>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa una contraseña">
+                            <input type="password" class="form-control" placeholder="Ingresa una contraseña" data-password>
                         </div>
                     </form>
                 </div>
@@ -170,11 +168,11 @@
                         <div class="form-row mb-2">
                             <div class="form-group col-md-6">
                                 <label class="font-weight-bold">Edad</label>
-                                <input type="number" class="form-control" placeholder="Tu edad">
+                                <input type="number" class="form-control" placeholder="Tu edad" data-age >
                             </div>
                             <div class="form-group col-md-6">
                                 <label class="font-weight-bold">Género</label>
-                                <select class="form-control">
+                                <select class="form-control" data-gender>
                                     <option value="masculino">Masculino</option>
                                     <option value="femenino">Femenino</option>
                                     <option value="otro">Otro</option>
@@ -182,24 +180,20 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label class="font-weight-bold">Fotografía</label>
-                            <input type="file" class="form-control" accept="image/*">
-                        </div>
-                        <div class="form-group mb-3">
                             <label class="font-weight-bold">Usuario</label>
-                            <input type="text" class="form-control" placeholder="Tu usuario">
+                            <input type="text" class="form-control" placeholder="Tu usuario" data-user >
                         </div>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">País</label>
-                            <input type="text" class="form-control" placeholder="Tu país">
+                            <input type="text" class="form-control" placeholder="Tu país" data-country>
                         </div>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Dirección Principal</label>
-                            <input type="text" class="form-control" placeholder="Tu dirección principal">
+                            <input type="text" class="form-control" placeholder="Tu dirección principal" data-mainaddr>
                         </div>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Dirección de Envío</label>
-                            <textarea class="form-control" placeholder="Tus direcciones de envío"></textarea>
+                            <textarea class="form-control" placeholder="Tus direcciones de envío" data-shippingaddr></textarea>
                         </div>
                         <div class="form-group mb-5">
                             <div class="form-check">
@@ -207,7 +201,7 @@
                                 <label class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y los términos y condiciones</label>
                             </div>
                         </div>
-                        <button class="btn btn-primary width-100">Regístrate</button>
+                        <button class="btn btn-primary width-100" data-save>Regístrate</button>
                     </form>
                     <small class="d-inline-block text-muted mt-3">Todos los derechos reservados | © 2023 PopBurst</small>
                 </div>
@@ -220,5 +214,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/admin/registerglob.js') }}" type="module"></script>
   </body>
 </html>
