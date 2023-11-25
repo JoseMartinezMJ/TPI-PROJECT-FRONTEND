@@ -8,18 +8,16 @@ btnSave.addEventListener('click', async(e) => {
 
     let id = document.querySelector('[data-id]').value;
     let category_name = document.querySelector('[data-category_name]').value;
-
-
-
-    if (document.querySelector('[data-rol]').value == 'Administrador') {
-        rol = true;
-    }
+    let created_at = document.querySelector('[data-created]').value;
+    let updated_at = document.querySelector('[data-updated]').value;
 
     //----> DESPUES DE VALIDAR TODO <----
 
     const category = Category(
         id,
-        category_name
+        category_name,
+        created_at,
+        updated_at
     );
 
     updateCategory(category);

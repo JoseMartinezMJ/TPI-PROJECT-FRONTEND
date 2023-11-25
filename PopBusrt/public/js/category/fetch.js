@@ -36,10 +36,11 @@ export const createCategory = async(category) => {
 }
 
 export const updateCategory = (category) => {
-    const newUser = {
+    const newCategory = {
         id: category.id,
         category_name: category.name,
-
+        created_at: category.created_at,
+        updated_at: category.updated_at
     };
 
     // Enviar la solicitud POST
@@ -48,7 +49,7 @@ export const updateCategory = (category) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(newUser)
+        body: JSON.stringify(newCategory)
     })
     .then(response => {
 

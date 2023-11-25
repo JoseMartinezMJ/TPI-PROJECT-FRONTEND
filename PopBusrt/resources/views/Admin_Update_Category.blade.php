@@ -135,8 +135,11 @@ Usuarios
 <div class="container">
       <form>
         <div class="form-group">
-          <p><label for="nombre" class="h4">Nombre de la categoria:</label></p>
-          <input type="text" class="form-control h4" id="nombre" placeholder="Ingrese el nombre de la categoria" required data-category_name>
+            <p><label for="nombre" class="h4">Nombre de la categoria:</label></p>
+            <input type="text" style="display: none;" value="{{$category->id}}" required data-id>
+            <input type="text" style="display: none;" value="{{$category->created_at}}" required data-created>
+            <input type="text" style="display: none;" value="{{$category->updated_at}}" required data-updated>
+            <input type="text" class="form-control h4" id="nombre" placeholder="Ingrese el nombre de la categoria" value="{{$category->category_name}}" required data-category_name>
         </div>
         
         <div class="container text-center p-5">
@@ -146,5 +149,5 @@ Usuarios
 </div>
 <div class="container" data-alert>			
 </div>
-<script src="{{ asset('js/admin/updateCategory.js') }}" type="module"></script>
+<script src="{{ asset('js/category/updateCategory.js') }}" type="module"></script>
 @endsection
